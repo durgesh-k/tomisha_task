@@ -7,3 +7,5 @@ double getHeight(BuildContext context) {
 double getWidth(BuildContext context) {
   return MediaQuery.of(context).size.width;
 }
+
+int? index = 0;

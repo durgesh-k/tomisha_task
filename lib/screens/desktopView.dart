@@ -160,7 +160,7 @@ class _DesktopViewState extends State<DesktopView> {
               selectedTextStyle: const TextStyle(color: Color(0xFFF7FAFC)),
               unselectedTextStyle: const TextStyle(color: Color(0xFF319795)),
               borderWidth: 0.9,
-              borderRadius: 10.0,
+              borderRadius: 12.0,
               disabledChildren: [],
               verticalOffset: 8.0,
               onSegmentChosen: (index) {

@@ -36,6 +36,7 @@ dependencies:
   responsive_builder: ^0.6.4
   responsive_framework: ^0.1.8
   flutter_svg: ^1.1.6
+  carousel_slider: ^4.2.1
 
 
   # The following adds the Cupertino Icons font to your application.

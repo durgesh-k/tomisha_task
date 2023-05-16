@@ -7,6 +7,7 @@ import 'package:material_segmented_control/material_segmented_control.dart';
 import 'package:tomisha_task/screens/pages/page1.dart';
 import 'package:tomisha_task/screens/pages/page2.dart';
 import 'package:tomisha_task/screens/pages/page3.dart';
+import 'package:tomisha_task/widgets/customTabbar.dart';
 import 'package:tomisha_task/widgets/wave.dart';
 
 import '../utils/constants.dart';
@@ -21,15 +22,6 @@ class MobileView extends StatefulWidget {
 class _MobileViewState extends State<MobileView> {
   int? _currentSelection = 0;
 
-  final Map<int, Widget> _children = {
-    0: const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24),
-      child: Text('Arbeitnehmer'),
-    ),
-    1: const Text('Arbeitgeber'),
-    2: const Text('Temporärbüro'),
-  };
-
   final List<Widget> _pages = [
     const Page1(),
     const Page2(),
@@ -40,6 +32,11 @@ class _MobileViewState extends State<MobileView> {
 
   @override
   Widget build(BuildContext context) {
+    final Map<int, Widget> _children = {
+      0: const Text('Arbeitnehmer'),
+      1: const Text('Arbeitgeber'),
+      2: const Text('Temporärbüro'),
+    };
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: PreferredSize(
@@ -120,25 +117,7 @@ class _MobileViewState extends State<MobileView> {
                   ],
                 ),
               ),
-              MaterialSegmentedControl(
-                children: _children,
-                selectionIndex: _currentSelection,
-                borderColor: Color(0xFFCBD5E0),
-                selectedColor: Color(0xFF81E6D9),
-                unselectedColor: Colors.white,
-                selectedTextStyle: const TextStyle(color: Color(0xFFF7FAFC)),
-                unselectedTextStyle: const TextStyle(color: Color(0xFF319795)),
-                borderWidth: 0.9,
-                borderRadius: 10.0,
-                disabledChildren: [],
-                verticalOffset: 8.0,
-                onSegmentChosen: (index) {
-                  setState(() {
-                    _currentSelection = index;
-                    _pageController!.jumpToPage(index);
-                  });
-                },
-              ),
+              CustomTabBar(),
               Flexible(
                 child: Container(
                   height: getHeight(context) * 1.7,
