@@ -28,8 +28,6 @@ class _MobileViewState extends State<MobileView> {
     const Page3(),
   ];
 
-  final PageController? _pageController = new PageController(initialPage: 0);
-
   @override
   Widget build(BuildContext context) {
     final Map<int, Widget> _children = {
@@ -122,7 +120,7 @@ class _MobileViewState extends State<MobileView> {
                 child: Container(
                   height: getHeight(context) * 1.7,
                   child: PageView(
-                    controller: _pageController,
+                    controller: pageController,
                     children: _pages,
                   ),
                 ),
@@ -135,7 +133,7 @@ class _MobileViewState extends State<MobileView> {
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
           child: Container(
-            height: getHeight(context) * 0.12,
+            height: getHeight(context) * 0.14,
             decoration: BoxDecoration(
                 border:
                     Border.all(color: Colors.black.withOpacity(0.2), width: 1),

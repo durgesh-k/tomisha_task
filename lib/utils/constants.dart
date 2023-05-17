@@ -9,3 +9,4 @@ double getWidth(BuildContext context) {
 }
 
 int? index = 0;
+final PageController? pageController = new PageController(initialPage: 0);

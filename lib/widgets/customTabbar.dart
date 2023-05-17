@@ -40,6 +40,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
               .map((e) => InkWell(
                     onTap: () {
                       _carouselController!.animateToPage(titles.indexOf(e));
+                      pageController!.jumpToPage(titles.indexOf(e));
                     },
                     child: AnimatedContainer(
                       height: 50,

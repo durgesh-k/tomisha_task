@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      builder: (context, child) {
+      /*builder: (context, child) {
         return ResponsiveWrapper.builder(
             BouncingScrollWrapper.builder(context, child!),
             maxWidth: getWidth(context),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
               const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
             ],
             background: Container(color: const Color(0xFFF5F5F5)));
-      },
+      },*/
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
